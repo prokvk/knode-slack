@@ -58,6 +58,7 @@ module.exports = do () ->
 					text: msgData.text
 					color: if msgData.template.type is 'success' then 'good' else 'danger'
 					fields: msgData.template.fields || null
+					mrkdwn_in: ['title', 'text']
 				}
 			]
 			subject = null
